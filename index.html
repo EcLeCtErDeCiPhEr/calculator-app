@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* Hide the default checkbox */
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    /* Create a custom checkbox */
+    input[type="checkbox"] + label {
+      position: relative;
+      padding-left: 25px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* Checkbox square */
+    input[type="checkbox"] + label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 35px;
+      height: 8px;
+      background-color: #181f32;
+      border: 2px solid #181f32;
+      border-radius: 10px;
+    }
+
+    /* Checkmark (hidden by default) */
+    input[type="checkbox"] + label::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      width: 10px;
+      height: 10px;
+      background-color: #d13f30;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      border-radius: 5px;
+    }
+
+    /* Show checkmark when checked */
+    input[type="checkbox"]:checked + label::after {
+      opacity: 1;
+    }
+  </style>
+  <body>
+    <div>
+      <div class="num">123</div>
+      <div class="upper">
+        <div>calc</div>
+
+        <div class="aside">
+          THEME
+          <div><input type="checkbox" name="" id="myCheckbox">
+        <label for="myCheckbox"></label></div>
+        </div>
+      </div>
+
+      <div class="container1">
+        <div id="number">399,981</div>
+      </div>
+
+      <div class="container2">
+        <div class="button">
+          <button class="item">7</button>
+          <button class="item">8</button>
+          <button class="item">9</button>
+          <button class="item1">DEL</button>
+          <button class="item">4</button>
+          <button class="item">5</button>
+          <button class="item">6</button>
+          <button class="item">+</button>
+          <button class="item">1</button>
+          <button class="item">2</button>
+          <button class="item">3</button>
+          <button class="item">-</button>
+          <button class="item">.</button>
+          <button class="item">0</button>
+          <button class="item">/</button>
+          <button class="item">x</button>
+        </div>
+        <div class="down">
+          <button class="reset">RESET</button>
+          <button class="equal">=</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
